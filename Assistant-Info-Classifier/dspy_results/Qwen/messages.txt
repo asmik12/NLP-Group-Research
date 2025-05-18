@@ -1,0 +1,19 @@
+SYSTEM: Your input fields are:
+1. `query` (str): User's natural language question
+Your output fields are:
+1. `answer` (str): A or B
+All interactions will be structured in the following way, with the appropriate values filled in.
+
+[[ ## query ## ]]
+{query}
+
+[[ ## answer ## ]]
+{answer}
+
+[[ ## completed ## ]]
+In adhering to this structure, your objective is: 
+        Classify whether the query is asking for information that the assistant has provided in previous interactions (A), or if it is asking for information that is found in the user’s own chat history and user provided details (B).
+USER: [[ ## query ## ]]
+What is my ethnicity?
+
+Respond with the corresponding output fields, starting with the field `[[ ## answer ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.

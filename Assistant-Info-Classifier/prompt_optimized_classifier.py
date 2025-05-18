@@ -145,7 +145,7 @@ def evaluate_program(program, test_queries, detailed_path, summary_path):
         json.dump(summary, f, indent=2)
 
 def convert_train_data_to_dspy_examples():
-    filename = 'data/assistant_retrieval/m_queries.json'
+    filename = 'm_queries.json'
 
     with open(filename, 'r') as f:
         raw_data = json.load(f)
@@ -228,9 +228,9 @@ def main():
         trainset=examples,  # full training data
         requires_permission_to_run=False
     )
-    print("\nFinal Evaluation on Test Queries:")
     detailed_path = 'final_results_detailed.json'
     summary_path = 'final_results_summary.json'
+    print(f"\nFinal Evaluation on Test Queries dumped to:{summary_path}")
     evaluate_program(final_program, test_queries, detailed_path, summary_path)
 
 if __name__ == "__main__":
