@@ -1,0 +1,23 @@
+{
+  "total": 500,
+  "correct": 481,
+  "accuracy": 0.962,
+  "per_class": {
+    "B": {
+      "precision": 0.9797,
+      "recall": 0.9775,
+      "f1_score": 0.9786,
+      "tp": 434,
+      "fp": 9,
+      "fn": 10
+    },
+    "A": {
+      "precision": 0.8246,
+      "recall": 0.8393,
+      "f1_score": 0.8319,
+      "tp": 47,
+      "fp": 10,
+      "fn": 9
+    }
+  }
+}
