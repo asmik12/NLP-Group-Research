@@ -13,13 +13,13 @@ from sklearn.model_selection import KFold
 modelname = '70B'
 client = OpenAI(api_key='EMPTY', base_url='http://0.0.0.0:8001/v1/')'''
 
-'''model = 'openai/Qwen2.5-32B-Instruct'
+model = 'openai/Qwen2.5-32B-Instruct'
 modelname = 'Qwen_32B'
-client = OpenAI(api_key='EMPTY', base_url='http://0.0.0.0:8006/v1/')'''
+client = OpenAI(api_key='EMPTY', base_url='http://0.0.0.0:8006/v1/')
 
-model = 'openai/Qwen/Qwen2.5-7B-Instruct'
+'''model = 'openai/Qwen2.5-7B-Instruct'
 modelname = 'Qwen_7B'
-client = OpenAI(api_key='EMPTY', base_url='http://0.0.0.0:8002/v1/')
+client = OpenAI(api_key='EMPTY', base_url='http://0.0.0.0:8002/v1/')'''
 
 class LoggingLM(dspy.LM):
     def __init__(self, **kwargs):
@@ -45,7 +45,7 @@ not_logging_lm = dspy.LM(
 
 lm = LoggingLM(
     model=model, 
-    api_base='http://0.0.0.0:8002/v1/',
+    api_base='http://0.0.0.0:8006/v1/',
     api_key='EMPTY', 
     model_type='chat'
 )
